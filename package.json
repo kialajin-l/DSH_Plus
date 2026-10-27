@@ -1,0 +1,11 @@
+{
+  "name": "dhs-plus",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal DeepSeek Harness plugin collection: balance badge, usage panel, session move, Nexus memory",
+  "type": "module",
+  "scripts": {
+    "pack:all": "node scripts/pack-all.mjs",
+    "check": "node scripts/check-all.mjs"
+  }
+}

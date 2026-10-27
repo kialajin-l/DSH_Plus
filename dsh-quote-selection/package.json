@@ -1,0 +1,27 @@
+{
+  "name": "dsh-quote-selection",
+  "version": "0.3.3",
+  "private": true,
+  "description": "Select any transcript text and push it into the composer as a Markdown quote",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-session"
+      ],
+      "platform": "web"
+    }
+  }
+}

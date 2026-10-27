@@ -1,0 +1,402 @@
+{
+ "creditCny": 0.002,
+ "source": "https://tokenbom.com/api/models",
+ "fetchedAt": "2026-10-25T03:32:16.658Z",
+ "models": {
+  "claude-4.6-sonnet": {
+   "inCredits": 300,
+   "outCredits": 1500,
+   "availability": "available"
+  },
+  "claude-sonnet-5": {
+   "inCredits": 200,
+   "outCredits": 1000,
+   "availability": "available"
+  },
+  "gpt-6-luna": {
+   "inCredits": 10,
+   "outCredits": 50,
+   "availability": "available"
+  },
+  "gemini-3-flash": {
+   "inCredits": 50,
+   "outCredits": 300,
+   "availability": "available"
+  },
+  "gemini-3.5-flash-lite": {
+   "inCredits": 30,
+   "outCredits": 250,
+   "availability": "available"
+  },
+  "deepseek-v4-pro": {
+   "inCredits": 132,
+   "outCredits": 396,
+   "availability": "available"
+  },
+  "deepseek-v4.1-flash": {
+   "inCredits": 30,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "grok-4.6": {
+   "inCredits": 200,
+   "outCredits": 600,
+   "availability": "available"
+  },
+  "grok-4.7": {
+   "inCredits": 200,
+   "outCredits": 600,
+   "availability": "available"
+  },
+  "qwen3.7-plus": {
+   "inCredits": 40,
+   "outCredits": 160,
+   "availability": "available"
+  },
+  "qwen3.8-max": {
+   "inCredits": 200,
+   "outCredits": 600,
+   "availability": "available"
+  },
+  "glm-4.5-air": {
+   "inCredits": 20,
+   "outCredits": 110,
+   "availability": "available"
+  },
+  "glm-5.2": {
+   "inCredits": 140,
+   "outCredits": 440,
+   "availability": "available"
+  },
+  "minimax-m2.5": {
+   "inCredits": 30,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "minimax-m2.5-highspeed": {
+   "inCredits": 60,
+   "outCredits": 240,
+   "availability": "available"
+  },
+  "minimax-m2.7-highspeed": {
+   "inCredits": 60,
+   "outCredits": 240,
+   "availability": "available"
+  },
+  "minimax-m3": {
+   "inCredits": 30,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "codestral-2508": {
+   "inCredits": 30,
+   "outCredits": 90,
+   "availability": "available"
+  },
+  "ministral-14b-2512": {
+   "inCredits": 20,
+   "outCredits": 20,
+   "availability": "available"
+  },
+  "ministral-3b-2512": {
+   "inCredits": 10,
+   "outCredits": 10,
+   "availability": "available"
+  },
+  "ministral-8b-2512": {
+   "inCredits": 15,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "sensenova-6.8-flash-lite": {
+   "inCredits": 10,
+   "outCredits": 40,
+   "availability": "available"
+  },
+  "mimo-v2.6-flash": {
+   "inCredits": 14,
+   "outCredits": 28,
+   "availability": "available"
+  },
+  "agnes-2.5-flash": {
+   "inCredits": 5,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "agnes-2.5-pro-beta": {
+   "inCredits": 45,
+   "outCredits": 90,
+   "availability": "available"
+  },
+  "agnes-3.0-flash": {
+   "inCredits": 5,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "claude-opus-5": {
+   "inCredits": 500,
+   "outCredits": 2500,
+   "availability": "available"
+  },
+  "gpt-5.4-mini": {
+   "inCredits": 75,
+   "outCredits": 450,
+   "availability": "available"
+  },
+  "gpt-5.5": {
+   "inCredits": 500,
+   "outCredits": 3000,
+   "availability": "available"
+  },
+  "gpt-5.6-luna": {
+   "inCredits": 20,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "gpt-5.6-sol": {
+   "inCredits": 400,
+   "outCredits": 2000,
+   "availability": "available"
+  },
+  "gpt-5.6-terra": {
+   "inCredits": 200,
+   "outCredits": 1200,
+   "availability": "available"
+  },
+  "gpt-6.1-sol": {
+   "inCredits": 200,
+   "outCredits": 1000,
+   "availability": "available"
+  },
+  "gpt-oss-20b": {
+   "inCredits": 3,
+   "outCredits": 10,
+   "availability": "available"
+  },
+  "gemini-2.5-pro": {
+   "inCredits": 125,
+   "outCredits": 1000,
+   "availability": "available"
+  },
+  "gemini-3.1-flash-lite": {
+   "inCredits": 25,
+   "outCredits": 150,
+   "availability": "available"
+  },
+  "gemini-3.1-pro": {
+   "inCredits": 200,
+   "outCredits": 1200,
+   "availability": "available"
+  },
+  "gemma-4-26b-a4b-it": {
+   "inCredits": 5,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "kimi-k2.6": {
+   "inCredits": 95,
+   "outCredits": 400,
+   "availability": "available"
+  },
+  "kimi-k2.7-code": {
+   "inCredits": 95,
+   "outCredits": 400,
+   "availability": "available"
+  },
+  "qwen3.8-flash": {
+   "inCredits": 15,
+   "outCredits": 47,
+   "availability": "available"
+  },
+  "glm-4.6v-flash": {
+   "inCredits": 10,
+   "outCredits": 30,
+   "availability": "available"
+  },
+  "glm-4.7-flash": {
+   "inCredits": 5,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "glm-5": {
+   "inCredits": 100,
+   "outCredits": 320,
+   "availability": "available"
+  },
+  "glm-5.1": {
+   "inCredits": 140,
+   "outCredits": 440,
+   "availability": "available"
+  },
+  "glm-5.3": {
+   "inCredits": 140,
+   "outCredits": 440,
+   "availability": "available"
+  },
+  "glm-5.3-flash": {
+   "inCredits": 15,
+   "outCredits": 50,
+   "availability": "available"
+  },
+  "minimax-m2.7": {
+   "inCredits": 30,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "hy3": {
+   "inCredits": 14,
+   "outCredits": 56,
+   "availability": "available"
+  },
+  "step-3.7-flash": {
+   "inCredits": 20,
+   "outCredits": 115,
+   "availability": "available"
+  },
+  "step-5-preview": {
+   "inCredits": 100,
+   "outCredits": 270,
+   "availability": "available"
+  },
+  "diffusiongemma-26b-a4b-it": {
+   "inCredits": 13,
+   "outCredits": 40,
+   "availability": "available"
+  },
+  "laguna-s-2.1": {
+   "inCredits": 10,
+   "outCredits": 20,
+   "availability": "available"
+  },
+  "nemotron-3-ultra": {
+   "inCredits": 50,
+   "outCredits": 220,
+   "availability": "available"
+  },
+  "gemini-4-argon": {
+   "inCredits": 200,
+   "outCredits": 1000,
+   "availability": "available"
+  },
+  "mimo-v2.6-pro": {
+   "inCredits": 44,
+   "outCredits": 87,
+   "availability": "available"
+  },
+  "hy4-preview": {
+   "inCredits": 84,
+   "outCredits": 251,
+   "availability": "available"
+  },
+  "gpt-5.4": {
+   "inCredits": 250,
+   "outCredits": 1500,
+   "availability": "available"
+  },
+  "gpt-6-sol": {
+   "inCredits": 200,
+   "outCredits": 1000,
+   "availability": "available"
+  },
+  "qwen3.6-35b-a3b": {
+   "inCredits": 25,
+   "outCredits": 151,
+   "availability": "available"
+  },
+  "agnes-2.5-pro-alpha": {
+   "inCredits": 45,
+   "outCredits": 90,
+   "availability": "available"
+  },
+  "gpt-6-astra": {
+   "inCredits": 1000,
+   "outCredits": 5000,
+   "availability": "available"
+  },
+  "gpt-oss-120b": {
+   "inCredits": 15,
+   "outCredits": 60,
+   "availability": "available"
+  },
+  "gemini-3.5-flash": {
+   "inCredits": 150,
+   "outCredits": 900,
+   "availability": "available"
+  },
+  "deepseek-v4-flash": {
+   "inCredits": 30,
+   "outCredits": 120,
+   "availability": "available"
+  },
+  "grok-4.5": {
+   "inCredits": 200,
+   "outCredits": 600,
+   "availability": "available"
+  },
+  "qwen3.8-27b": {
+   "inCredits": 43,
+   "outCredits": 170,
+   "availability": "available"
+  },
+  "step-3.5-flash": {
+   "inCredits": 10,
+   "outCredits": 30,
+   "availability": "available"
+  },
+  "laguna-xs-2.1": {
+   "inCredits": 5,
+   "outCredits": 15,
+   "availability": "available"
+  },
+  "gpt-5-mini": {
+   "inCredits": 25,
+   "outCredits": 200,
+   "availability": "available"
+  },
+  "gemini-2.5-flash": {
+   "inCredits": 30,
+   "outCredits": 250,
+   "availability": "available"
+  },
+  "gemini-3.6-flash": {
+   "inCredits": 75,
+   "outCredits": 375,
+   "availability": "available"
+  },
+  "gemini-3.7-flash": {
+   "inCredits": 75,
+   "outCredits": 375,
+   "availability": "available"
+  },
+  "gemini-3.8-flash": {
+   "inCredits": 75,
+   "outCredits": 375,
+   "availability": "available"
+  },
+  "gemma-4-31b-it": {
+   "inCredits": 9,
+   "outCredits": 34,
+   "availability": "available"
+  },
+  "kimi-k3": {
+   "inCredits": 300,
+   "outCredits": 1500,
+   "availability": "available"
+  },
+  "stepaudio-2.5-chat": {
+   "inCredits": 150,
+   "outCredits": 350,
+   "availability": "available"
+  },
+  "qwen3.7-max": {
+   "inCredits": 100,
+   "outCredits": 300,
+   "availability": "cooling"
+  },
+  "muse-glimmer-30b": {
+   "inCredits": 35,
+   "outCredits": 150,
+   "availability": "cooling"
+  }
+ }
+}

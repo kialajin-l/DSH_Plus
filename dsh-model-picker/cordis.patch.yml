@@ -1,0 +1,9 @@
+# DSH bundle patch: mount the host half into the active profile.
+# Disables the native composer model seat via this bundle patch; this package
+# takes over the `conversation.input.model` single seat with a compact picker.
+- insert:
+    - id: dsh-model-picker
+      name: 'dsh-model-picker'
+- id: ui-model-selection
+  disabled: true
+

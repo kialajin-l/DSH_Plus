@@ -1,0 +1,46 @@
+{
+  "name": "dsh-code-wiki",
+  "version": "0.1.1",
+  "description": "Structured per-project wiki browser: README digest, docs tree, language mix and git activity for configured roots, with Markdown export",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "wiki",
+    "documentation",
+    "code",
+    "readme"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {}
+}

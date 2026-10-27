@@ -1,0 +1,5 @@
+# DSH bundle patch: mount the host half into the active profile.
+# The browser half is declared by package.json's dsh.client field.
+- insert:
+    - id: dsh-designseed
+      name: 'dsh-designseed'

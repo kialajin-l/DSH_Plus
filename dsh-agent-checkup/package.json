@@ -1,0 +1,46 @@
+{
+  "name": "dsh-agent-checkup",
+  "version": "0.1.2",
+  "description": "Evidence-lite agent checkup: four read-only probes over local DSH session logs, candidate-level report (AHM 商品化 1.1 设计)",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./client/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "agent",
+    "quality",
+    "audit",
+    "diagnostics"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {}
+}

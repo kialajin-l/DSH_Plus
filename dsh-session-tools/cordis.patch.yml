@@ -1,0 +1,4 @@
+# DSH bundle patch: mount the host half into the active profile.
+- insert:
+    - id: dsh-session-tools
+      name: 'dsh-session-tools'
