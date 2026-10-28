@@ -10,9 +10,16 @@
 | **dsh-project-panel** | [![npm](https://img.shields.io/npm/v/dsh-project-panel)](https://www.npmjs.com/package/dsh-project-panel) | 项目进度面板：活跃度推断、锚点标记、自包含深色 HTML 导出 |
 | **dsh-agent-checkup** | [![npm](https://img.shields.io/npm/v/dsh-agent-checkup)](https://www.npmjs.com/package/dsh-agent-checkup) | Agent 体检（AHM Evidence-lite）：重复性/错误可见性/工具失败率/上下文膨胀四探针，HTML 报告 |
 | **dsh-code-wiki** | [![npm](https://img.shields.io/npm/v/dsh-code-wiki)](https://www.npmjs.com/package/dsh-code-wiki) | 仓库 Wiki：README 摘要、docs 树、技术栈、git 活跃度、语言构成，MD 导出 |
+| **dsh-balance-badge** | [![npm](https://img.shields.io/npm/v/dsh-balance-badge)](https://www.npmjs.com/package/dsh-balance-badge) | 标题栏余额徽章：余额/今日花费/本会话 tokens，峰谷计价感知 |
+| **dsh-usage-panel** | [![npm](https://img.shields.io/npm/v/dsh-usage-panel)](https://www.npmjs.com/package/dsh-usage-panel) | 用量统计：近 30 天/模型/会话三视角，服务商感知计价，防子代理重复计费 |
+| **dsh-session-tools** | [![npm](https://img.shields.io/npm/v/dsh-session-tools)](https://www.npmjs.com/package/dsh-session-tools) | 会话工具箱：Markdown/ZIP 导出、时间线跳轮、安全复制、右键菜单 |
+| **dsh-session-move** | [![npm](https://img.shields.io/npm/v/dsh-session-move)](https://www.npmjs.com/package/dsh-session-move) | 跨工作区安全移动会话，每次移动自动备份 |
+| **dsh-nexus-memory** | [![npm](https://img.shields.io/npm/v/dsh-nexus-memory)](https://www.npmjs.com/package/dsh-nexus-memory) | 长期记忆：自动注入项目相关记忆、规则/模型提取、去重与反馈排序（需 Python） |
+| **dsh-quote-selection** | [![npm](https://img.shields.io/npm/v/dsh-quote-selection)](https://www.npmjs.com/package/dsh-quote-selection) | 选中即引用：工具条添加到对话/新开讨论，引用卡片双击跳轮 |
+| **dsh-model-picker** | [![npm](https://img.shields.io/npm/v/dsh-model-picker)](https://www.npmjs.com/package/dsh-model-picker) | Codex 风格模型选择器 + 4 档推理力度，补丁随包内置 |
 
 ```powershell
-npm install --prefix "$env:USERPROFILE\.dsh\profiles\desktop" --legacy-peer-deps dsh-codex-import dsh-project-panel dsh-code-wiki dsh-agent-checkup
+npm install --prefix "$env:USERPROFILE\.dsh\profiles\desktop" --legacy-peer-deps dsh-codex-import dsh-project-panel dsh-code-wiki dsh-agent-checkup dsh-balance-badge dsh-usage-panel dsh-session-tools dsh-session-move dsh-nexus-memory dsh-quote-selection dsh-model-picker
 ```
 
 ## 全部插件

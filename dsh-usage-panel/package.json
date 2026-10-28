@@ -1,7 +1,6 @@
 {
   "name": "dsh-usage-panel",
   "version": "0.1.5",
-  "private": true,
   "description": "Token usage and CNY spend for sessions and days, priced with the DeepSeek peak/off-peak table",
   "type": "module",
   "main": "lib/index.js",
@@ -26,10 +25,36 @@
       ],
       "platform": "web"
     }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "usage",
+    "cost",
+    "pricing",
+    "statistics",
+    "tokens"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "prices",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kialajin-l/DSH_Plus.git",
+    "directory": "dsh-usage-panel"
+  },
+  "homepage": "https://github.com/kialajin-l/DSH_Plus/tree/main/dsh-usage-panel#readme",
+  "bugs": {
+    "url": "https://github.com/kialajin-l/DSH_Plus/issues"
   }
 }
-
-
-
-
-

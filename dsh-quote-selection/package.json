@@ -1,7 +1,6 @@
 {
   "name": "dsh-quote-selection",
   "version": "0.3.3",
-  "private": true,
   "description": "Select any transcript text and push it into the composer as a Markdown quote",
   "type": "module",
   "main": "lib/index.js",
@@ -23,5 +22,34 @@
       ],
       "platform": "web"
     }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "quote",
+    "selection",
+    "composer",
+    "input"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kialajin-l/DSH_Plus.git",
+    "directory": "dsh-quote-selection"
+  },
+  "homepage": "https://github.com/kialajin-l/DSH_Plus/tree/main/dsh-quote-selection#readme",
+  "bugs": {
+    "url": "https://github.com/kialajin-l/DSH_Plus/issues"
   }
 }

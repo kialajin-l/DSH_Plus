@@ -1,7 +1,6 @@
 {
   "name": "dsh-session-tools",
   "version": "0.2.0",
-  "private": true,
   "description": "Session tooling: session-row menu actions (Markdown/ZIP export, duplicate, move), in-conversation timeline, batch archive",
   "type": "module",
   "main": "lib/index.js",
@@ -23,7 +22,35 @@
       ],
       "platform": "web"
     }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "export",
+    "markdown",
+    "timeline",
+    "zip"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kialajin-l/DSH_Plus.git",
+    "directory": "dsh-session-tools"
+  },
+  "homepage": "https://github.com/kialajin-l/DSH_Plus/tree/main/dsh-session-tools#readme",
+  "bugs": {
+    "url": "https://github.com/kialajin-l/DSH_Plus/issues"
   }
 }
-
-

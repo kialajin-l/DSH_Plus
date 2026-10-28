@@ -1,7 +1,6 @@
 {
   "name": "dsh-session-move",
   "version": "0.1.1",
-  "private": true,
   "description": "Move a cold historical DSH session between registered workspaces, safely and with rollback",
   "type": "module",
   "main": "lib/index.js",
@@ -26,6 +25,34 @@
       ],
       "platform": "web"
     }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "session",
+    "move",
+    "workspace",
+    "organize"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kialajin-l/DSH_Plus.git",
+    "directory": "dsh-session-move"
+  },
+  "homepage": "https://github.com/kialajin-l/DSH_Plus/tree/main/dsh-session-move#readme",
+  "bugs": {
+    "url": "https://github.com/kialajin-l/DSH_Plus/issues"
   }
 }
-

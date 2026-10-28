@@ -1,7 +1,6 @@
 {
   "name": "dsh-nexus-memory",
   "version": "0.3.1",
-  "private": true,
   "description": "Read-only Nexus long-term memory bridge: project memory injection, settings search, and feedback",
   "type": "module",
   "main": "lib/index.js",
@@ -26,8 +25,35 @@
       ],
       "platform": "web"
     }
+  },
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": {
+    "name": "kialajin"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "memory",
+    "long-term",
+    "nexus",
+    "sqlite"
+  ],
+  "files": [
+    "lib",
+    "client",
+    "py",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kialajin-l/DSH_Plus.git",
+    "directory": "dsh-nexus-memory"
+  },
+  "homepage": "https://github.com/kialajin-l/DSH_Plus/tree/main/dsh-nexus-memory#readme",
+  "bugs": {
+    "url": "https://github.com/kialajin-l/DSH_Plus/issues"
   }
 }
-
-
-
