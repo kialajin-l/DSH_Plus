@@ -11,6 +11,7 @@ const LICENSE = readFileSync(licSource, "utf8");
 const plugins = [
   {
     dir: "dsh-balance-badge",
+    name: "@kialajin/dsh-balance-badge",
     kw: ["balance", "usage", "pricing", "badge"],
     files: ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-balance-badge
@@ -32,6 +33,7 @@ dsh plugin --profile desktop add dsh-balance-badge
   },
   {
     dir: "dsh-usage-panel",
+    name: "@kialajin/dsh-usage-panel",
     kw: ["usage", "cost", "pricing", "statistics", "tokens"],
     files: ["lib", "client", "prices", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-usage-panel
@@ -54,6 +56,7 @@ dsh plugin --profile desktop add dsh-usage-panel
   },
   {
     dir: "dsh-session-move",
+    name: "@kialajin/dsh-session-move",
     kw: ["session", "move", "workspace", "organize"],
     files: ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-session-move
@@ -98,6 +101,7 @@ dsh plugin --profile desktop add dsh-nexus-memory
   },
   {
     dir: "dsh-quote-selection",
+    name: "@kialajin/dsh-quote-selection",
     kw: ["quote", "selection", "composer", "input"],
     files: ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-quote-selection
@@ -119,6 +123,7 @@ dsh plugin --profile desktop add dsh-quote-selection
   },
   {
     dir: "dsh-session-tools",
+    name: "@kialajin/dsh-session-tools",
     kw: ["session", "export", "markdown", "timeline", "zip"],
     files: ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-session-tools
@@ -141,6 +146,7 @@ dsh plugin --profile desktop add dsh-session-tools
   },
   {
     dir: "dsh-model-picker",
+    name: "@kialajin/dsh-model-picker",
     kw: ["model", "selector", "reasoning", "input"],
     files: ["lib", "client", "cordis.patch.yml", "README.md", "LICENSE"],
     readme: `# dsh-model-picker
@@ -167,6 +173,7 @@ for (const p of plugins) {
   const pkgPath = join(dir, "package.json");
   const pkg = JSON.parse(readFileSync(pkgPath, "utf8"));
   delete pkg.private;
+  if (p.name) pkg.name = p.name;
   pkg.license = "PolyForm-Noncommercial-1.0.0";
   pkg.author = { name: "kialajin" };
   pkg.keywords = ["deepseek-harness", "dsh", "dsh-plugin", ...p.kw];
@@ -179,3 +186,4 @@ for (const p of plugins) {
   writeFileSync(join(dir, "LICENSE"), LICENSE, "utf8");
   console.log(`${p.dir}: v${pkg.version} prepped (license PolyForm, files=[${p.files.join(",")}])`);
 }
+

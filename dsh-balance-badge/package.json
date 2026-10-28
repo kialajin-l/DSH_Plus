@@ -1,5 +1,5 @@
 {
-  "name": "dsh-balance-badge",
+  "name": "@kialajin/dsh-balance-badge",
   "version": "0.1.0",
   "description": "DeepSeek account balance badge and session token usage in the conversation header",
   "type": "module",
