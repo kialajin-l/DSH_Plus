@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "dsh-model-picker",
+	id: "@kialajin/dsh-model-picker",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;

@@ -11,5 +11,5 @@ A Codex-style model selector for the DSH composer, with 4 reasoning-effort level
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-model-picker
+dsh plugin --profile desktop add @kialajin/dsh-model-picker
 ```

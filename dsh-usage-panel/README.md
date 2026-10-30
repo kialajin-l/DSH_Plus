@@ -12,5 +12,5 @@ A **usage statistics** settings page for DSH: token and cost accounting across a
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-usage-panel
+dsh plugin --profile desktop add @kialajin/dsh-usage-panel
 ```

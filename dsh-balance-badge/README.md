@@ -11,5 +11,5 @@ A **balance badge** for the DSH title bar: account balance, today's cost, sessio
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-balance-badge
+dsh plugin --profile desktop add @kialajin/dsh-balance-badge
 ```

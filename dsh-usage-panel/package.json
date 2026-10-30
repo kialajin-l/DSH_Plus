@@ -1,6 +1,6 @@
 {
   "name": "@kialajin/dsh-usage-panel",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Token usage and CNY spend for sessions and days, priced with the DeepSeek peak/off-peak table",
   "type": "module",
   "main": "lib/index.js",

@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "dsh-quote-selection",
+	id: "@kialajin/dsh-quote-selection",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -7,7 +7,7 @@ window.__ModuleLoader__.load({
 		const React = require("react");
 		const ReactDOM = require("react-dom");
 		const h = React.createElement;
-		const name = "dsh-quote-selection";
+		const name = "@kialajin/dsh-quote-selection";
 		/** Dock slot is session-scoped; uiWorkspace creates the discussion session. */
 		const inject = ["slots", "uiWorkspace"];
 		const BAR_BG = "var(--dsw-alias-bg-layer-2, #232428)";

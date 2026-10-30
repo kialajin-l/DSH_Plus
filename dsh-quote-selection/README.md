@@ -11,5 +11,5 @@ Select any text in a DSH conversation and act on it immediately.
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-quote-selection
+dsh plugin --profile desktop add @kialajin/dsh-quote-selection
 ```

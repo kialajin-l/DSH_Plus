@@ -1,12 +1,12 @@
 window.__ModuleLoader__.load({
-	id: "dsh-session-move",
+	id: "@kialajin/dsh-session-move",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
 		Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 		const React = require("react");
 		const h = React.createElement;
-		const name = "dsh-session-move";
+		const name = "@kialajin/dsh-session-move";
 		const inject = ["slots", "locale"];
 		const LABEL = "var(--dsw-alias-label-primary, #e8eaed)";
 		const MUTED = "var(--dsw-alias-label-secondary, #9aa0a6)";

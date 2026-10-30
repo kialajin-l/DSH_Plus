@@ -1,5 +1,5 @@
 window.__ModuleLoader__.load({
-	id: "dsh-session-tools",
+	id: "@kialajin/dsh-session-tools",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
@@ -7,7 +7,7 @@ window.__ModuleLoader__.load({
 		const React = require("react");
 		const ReactDOM = require("react-dom");
 		const h = React.createElement;
-		const name = "dsh-session-tools";
+		const name = "@kialajin/dsh-session-tools";
 		const inject = ["slots"];
 		const API = "/session-tools/api";
 		const LABEL = "var(--dsw-alias-label-primary, #e8eaed)";

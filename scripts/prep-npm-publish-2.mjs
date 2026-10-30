@@ -27,7 +27,7 @@ A **balance badge** for the DSH title bar: account balance, today's cost, sessio
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-balance-badge
+dsh plugin --profile desktop add @kialajin/dsh-balance-badge
 \`\`\`
 `,
   },
@@ -50,7 +50,7 @@ A **usage statistics** settings page for DSH: token and cost accounting across a
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-usage-panel
+dsh plugin --profile desktop add @kialajin/dsh-usage-panel
 \`\`\`
 `,
   },
@@ -72,7 +72,7 @@ Move DSH sessions between workspaces safely, with full backups.
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-session-move
+dsh plugin --profile desktop add @kialajin/dsh-session-move
 \`\`\`
 `,
   },
@@ -117,7 +117,7 @@ Select any text in a DSH conversation and act on it immediately.
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-quote-selection
+dsh plugin --profile desktop add @kialajin/dsh-quote-selection
 \`\`\`
 `,
   },
@@ -140,7 +140,7 @@ DSH 会话工具箱：导出 Markdown / 批量 ZIP（零依赖自研 ZIP 写入�
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-session-tools
+dsh plugin --profile desktop add @kialajin/dsh-session-tools
 \`\`\`
 `,
   },
@@ -162,7 +162,7 @@ A Codex-style model selector for the DSH composer, with 4 reasoning-effort level
 ## Install
 
 \`\`\`bash
-dsh plugin --profile desktop add dsh-model-picker
+dsh plugin --profile desktop add @kialajin/dsh-model-picker
 \`\`\`
 `,
   },

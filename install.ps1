@@ -47,6 +47,9 @@ $nm = Join-Path $ProfileDir "node_modules"
 New-Item -ItemType Directory -Force -Path $nm | Out-Null
 foreach ($p in $plugins) {
     $link = Join-Path $nm $p.Name
+    # scoped 包名（@scope/name）需先建 scope 父目录
+    $linkParent = Split-Path $link -Parent
+    if (-not (Test-Path $linkParent)) { New-Item -ItemType Directory -Force -Path $linkParent | Out-Null }
     if (Test-Path $link) {
         $item = Get-Item $link -Force
         if ($item.LinkType -eq "Junction") { Write-Host "  junction 已存在: $($p.Name)"; continue }

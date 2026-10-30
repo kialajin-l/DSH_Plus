@@ -12,5 +12,5 @@ DSH 会话工具箱：导出 Markdown / 批量 ZIP（零依赖自研 ZIP 写入�
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-session-tools
+dsh plugin --profile desktop add @kialajin/dsh-session-tools
 ```

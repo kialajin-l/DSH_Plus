@@ -1,6 +1,6 @@
 {
   "name": "@kialajin/dsh-session-tools",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Session tooling: session-row menu actions (Markdown/ZIP export, duplicate, move), in-conversation timeline, batch archive",
   "type": "module",
   "main": "lib/index.js",

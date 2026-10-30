@@ -11,5 +11,5 @@ Move DSH sessions between workspaces safely, with full backups.
 ## Install
 
 ```bash
-dsh plugin --profile desktop add dsh-session-move
+dsh plugin --profile desktop add @kialajin/dsh-session-move
 ```

@@ -1,6 +1,6 @@
 {
   "name": "@kialajin/dsh-quote-selection",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Select any transcript text and push it into the composer as a Markdown quote",
   "type": "module",
   "main": "lib/index.js",

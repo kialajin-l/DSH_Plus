@@ -1,6 +1,6 @@
 {
   "name": "@kialajin/dsh-model-picker",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Compact Codex-style model and reasoning-effort picker for the DSH composer",
   "type": "module",
   "main": "lib/index.js",

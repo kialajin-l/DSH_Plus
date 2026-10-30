@@ -1,12 +1,12 @@
 window.__ModuleLoader__.load({
-	id: "dsh-balance-badge",
+	id: "@kialajin/dsh-balance-badge",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
 		Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 		const React = require("react");
 		const h = React.createElement;
-		const name = "dsh-balance-badge";
+		const name = "@kialajin/dsh-balance-badge";
 		/** Services: header slot, session bindings for token usage, Account Remote for balance. */
 		const inject = ["slots", "sessions", "locale", "remote", "remote.account"];
 		const REFRESH_MS = 5 * 60 * 1000;

@@ -1,12 +1,12 @@
 window.__ModuleLoader__.load({
-	id: "dsh-usage-panel",
+	id: "@kialajin/dsh-usage-panel",
 	factory: (require) => {
 		var module = { exports: {} };
 		var exports = module.exports;
 		Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 		const React = require("react");
 		const h = React.createElement;
-		const name = "dsh-usage-panel";
+		const name = "@kialajin/dsh-usage-panel";
 		const inject = ["slots", "locale"];
 		const API = "/usage-panel/api";
 		const LABEL = "var(--dsw-alias-label-primary, #e8eaed)";

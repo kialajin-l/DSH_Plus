@@ -1,4 +1,4 @@
 # DSH bundle patch: mount the host half into the active profile.
 - insert:
-    - id: dsh-quote-selection
-      name: 'dsh-quote-selection'
+    - id: "@kialajin/dsh-quote-selection"
+      name: "@kialajin/dsh-quote-selection"

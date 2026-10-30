@@ -1,6 +1,6 @@
 {
   "name": "@kialajin/dsh-session-move",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Move a cold historical DSH session between registered workspaces, safely and with rollback",
   "type": "module",
   "main": "lib/index.js",
