@@ -44,7 +44,7 @@ npm install --prefix "$env:USERPROFILE\.dsh\profiles\desktop" --legacy-peer-deps
 profile 里已经用 **junction** 把 `~/.dsh/profiles/desktop/node_modules/<包名>` 指到这里：
 
 ```
-C:\Users\Wayne\.dsh\profiles\desktop\node_modules\dsh-balance-badge
+C:\Users\Wayne\.dsh\profiles\desktop\node_modules\@kialajin\dsh-balance-badge
   -> <DHS_Plus 源码目录>\\dsh-balance-badge
 ```
 
@@ -69,7 +69,8 @@ npm run pack:all
 产物在 `dist/`，每个插件一个 `.tgz`。安装方拿到 tgz 后：
 
 ```powershell
-dsh plugin --profile <profile> add file:<绝对路径>/dsh-balance-badge-0.1.0.tgz
+# scoped 包的 tgz 文件名会去掉 @scope/ 前缀
+dsh plugin --profile <profile> add file:<绝对路径>/kialajin-dsh-balance-badge-0.1.1.tgz
 ```
 
 或者直接把目录拷进 `<profile>/node_modules/` 并加入 `dsh.profile.bundles`。
