@@ -2,7 +2,7 @@
 
 个人维护的 DSH 插件源码集中地，从这里开发、调试、打包。
 
-## 已上架 npm（点击即装）
+## 已上架 npm（一条命令装齐）
 
 | 插件 | npm | 功能 |
 |---|---|---|
@@ -18,9 +18,21 @@
 | **@kialajin/dsh-quote-selection** | [![npm](https://img.shields.io/npm/v/@kialajin/dsh-quote-selection)](https://www.npmjs.com/package/@kialajin/dsh-quote-selection) | 选中即引用：工具条添加到对话/新开讨论，引用卡片双击跳轮 |
 | **@kialajin/dsh-model-picker** | [![npm](https://img.shields.io/npm/v/@kialajin/dsh-model-picker)](https://www.npmjs.com/package/@kialajin/dsh-model-picker) | Codex 风格模型选择器 + 4 档推理力度，补丁随包内置 |
 
+用 DSH 自带的 `dsh plugin` 命令安装（上表 11 个一次装齐；`--profile` 换成你要用的 profile 名）：
+
 ```powershell
-npm install --prefix "$env:USERPROFILE\.dsh\profiles\desktop" --legacy-peer-deps dsh-codex-import dsh-project-panel dsh-code-wiki dsh-agent-checkup dsh-nexus-memory @kialajin/dsh-balance-badge @kialajin/dsh-usage-panel @kialajin/dsh-session-tools @kialajin/dsh-session-move @kialajin/dsh-quote-selection @kialajin/dsh-model-picker
+dsh plugin --profile desktop add dsh-codex-import dsh-project-panel dsh-code-wiki dsh-agent-checkup dsh-nexus-memory @kialajin/dsh-balance-badge @kialajin/dsh-usage-panel @kialajin/dsh-session-tools @kialajin/dsh-session-move @kialajin/dsh-quote-selection @kialajin/dsh-model-picker
 ```
+
+单个安装：
+
+```powershell
+dsh plugin --profile desktop add @kialajin/dsh-balance-badge
+```
+
+`dsh plugin add` 会用 profile 自己的包管理器（pnpm）装包，并把包名写进 profile `package.json` 的 `dsh.profile.bundles`——装完重启 DeepSeek Harness 即生效。
+
+> 不要用 `npm install --prefix <profile 目录>` 往 profile 里塞插件：profile 是 pnpm 工作区（`pnpm-workspace.yaml` + `pnpm-lock.yaml`），npm 会另起一套 `package-lock.json` / `node_modules` 布局，而且**不会**把插件写进 `dsh.profile.bundles`，DSH 不会加载它。
 
 ## 全部插件
 
@@ -41,11 +53,11 @@ npm install --prefix "$env:USERPROFILE\.dsh\profiles\desktop" --legacy-peer-deps
 
 ## 开发方式
 
-profile 里已经用 **junction** 把 `~/.dsh/profiles/desktop/node_modules/<包名>` 指到这里：
+profile 里已经用 **junction** 把 `~/.dsh/profiles/desktop/node_modules/<包名>` 指到这里（scoped 包落在 `node_modules\@<scope>\<包名>`）：
 
 ```
-C:\Users\Wayne\.dsh\profiles\desktop\node_modules\dsh-balance-badge
-  -> <DHS_Plus 源码目录>\\dsh-balance-badge
+C:\Users\Wayne\.dsh\profiles\desktop\node_modules\@kialajin\dsh-balance-badge
+  -> <仓库目录>\dsh-balance-badge
 ```
 
 所以改这里的源码，DSH 重载插件后即生效（客户端 bundle 需要刷新页面；宿主代码需要触发一次 profile 重载或重启）。
@@ -69,24 +81,26 @@ npm run pack:all
 产物在 `dist/`，每个插件一个 `.tgz`。安装方拿到 tgz 后：
 
 ```powershell
-dsh plugin --profile <profile> add file:<绝对路径>/dsh-balance-badge-0.1.0.tgz
+dsh plugin --profile <profile> add file:<绝对路径>/kialajin-dsh-balance-badge-0.1.1.tgz
 ```
 
-或者直接把目录拷进 `<profile>/node_modules/` 并加入 `dsh.profile.bundles`。
+> scoped 包（`@kialajin/dsh-xxx`）的 tgz 文件名会去掉 `@` 并把 `/` 换成 `-`，即 `kialajin-dsh-xxx-<版本>.tgz`。
+
+或者直接把目录拷进 `<profile>/node_modules/`（scoped 包拷进 `node_modules/@<scope>/`）并加入 `dsh.profile.bundles`。
 
 ### 一键安装（推荐）
 
-把整个 `DHS_Plus` 目录拷到目标机任意位置，然后在**普通 PowerShell**（管理员不需要）里执行：
+把整个仓库目录（含 `install.ps1` 的那一层）拷到目标机任意位置，然后在**普通 PowerShell**（管理员不需要）里执行：
 
 ```powershell
-cd <DHS_Plus 目录>
+cd <仓库目录>
 powershell -ExecutionPolicy Bypass -File install.ps1
 ```
 
 脚本会自动完成：
 
 1. 发现全部插件（12 个，含 `dsh.bundle.patch` 声明的包）
-2. 为每个插件创建 `<profile>/node_modules/<name>` junction
+2. 为每个插件创建 junction（`<profile>/node_modules/<包名>`，scoped 包为 `<profile>/node_modules/@<scope>/<包名>`）
 3. 注册 profile `package.json` 的 `file:` 依赖与 `dsh.profile.bundles`
 4. 追加 model-picker 所需的原生选择器禁用 patch（`-NoModelPickerPatch` 跳过）
 5. 修改前自动备份 `package.json` / `cordis.patch.yml`（`*.bak-install-<时间戳>`）
@@ -98,7 +112,7 @@ powershell -ExecutionPolicy Bypass -File install.ps1
 注意：
 
 - flowforge / ruleforge 是 **MCP 配置**（cordis.patch.yml 的 stdio 条目），不在脚本范围，按需手动加
-- `dsh-designseed` 依赖 [DesignSeed](https://github.com/kialajin-l/DesignSeed) 引擎，需将其克隆到本机并在插件配置里指定引擎路径
+- `dsh-designseed` 未发布到 npm（不在上面的安装命令里），且依赖 [DesignSeed](https://github.com/kialajin-l/DesignSeed) 引擎：需将其克隆到本机并在插件配置里指定引擎路径
 - `dsh-nexus-memory` 需要目标机有 Python；检测不到会自动降级为「未初始化」，不影响其他插件
 
 ## 约定
