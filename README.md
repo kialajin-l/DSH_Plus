@@ -51,6 +51,42 @@ dsh plugin --profile desktop add @kialajin/dsh-balance-badge
 | `dsh-code-wiki` | 设置页「项目 Wiki」：扫描配置根目录下项目，生成结构化总览（README 摘要 / package.json 元数据与脚本 / docs 树 / 顶层目录 / git 活跃度 / 语言构成），缓存于 `<DSH home>/storages/code-wiki/`，可导出单文件 Markdown 到 Downloads（源自 [kialajin-l/Code-Wiki](https://github.com/kialajin-l/Code-Wiki)）|
 | `dsh-designseed` | 设置页「原型设计」：调用 [DesignSeed](https://github.com/kialajin-l/DesignSeed) 引擎（需同机部署，见下方注意）从需求描述生成 AI 风格化 HTML 原型（28 种风格，支持双风格混合），iframe 预览 + storages 留存。只读引擎，输出写 `<DSH home>/storages/designseed/` |
 
+## 本地运行
+
+DeepSeek Harness 是桌面应用，装在**宿主机**上跑；插件装进 profile 后由 DSH 加载（见下方「一键安装」）。插件本身零第三方依赖，只有 Node ≥ 20 与 npm 就够，所以本地有两种走法。
+
+### 方式一：宿主机直接跑（Windows）
+
+```powershell
+cd <仓库目录>
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
+装完重启 DeepSeek Harness 生效。开发时的源码直连方式见「开发方式」。
+
+### 方式二：Docker 里跑插件侧的检查与打包
+
+不想在宿主机装 Node，或要在 CI 里复现同一套检查时，直接用官方 `node` 镜像跑仓库自带的两个脚本（无需 `npm install`）：
+
+```bash
+# 语法检查所有插件的宿主入口与客户端入口
+docker run --rm -v "$PWD:/repo" -w /repo node:20 npm run check
+
+# 打包全部插件，产物写入 dist/
+docker run --rm -v "$PWD:/repo" -w /repo node:20 npm run pack:all
+```
+
+Windows PowerShell 里把挂载参数写成 `${PWD}`：
+
+```powershell
+docker run --rm -v "${PWD}:/repo" -w /repo node:20 npm run check
+docker run --rm -v "${PWD}:/repo" -w /repo node:20 npm run pack:all
+```
+
+仓库目录以读写方式挂进容器，`dist/` 里的 `.tgz` 会直接落回宿主机，不用再手工拷出来。
+
+> Docker 只覆盖插件侧的检查与打包。DeepSeek Harness 本体仍需装在宿主机上，插件通过 junction 或 `dsh plugin add` 挂进 profile 后重启 DSH 才会在客户端里出现。
+
 ## 开发方式
 
 profile 里已经用 **junction** 把 `~/.dsh/profiles/desktop/node_modules/<包名>` 指到这里（scoped 包落在 `node_modules\@<scope>\<包名>`）：
